@@ -1,0 +1,77 @@
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+    <div class="center sliding">Week 1</div>
+    <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a></div>
+  </div>
+</div>
+<div class="pages">
+  <div data-page="week1" class="page">
+    <div class="page-content">
+      <div class="content-block-title">Week </div>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/4KbSRXP0wik" frameborder="0" allowfullscreen></iframe>
+
+
+      <div class="list-block">
+        <ul>
+          <li id="addActivity"><a href="add_activity" data-context-name="add_activity" class="item-link item-content">
+              <div class="item-inner">
+                <div class="item-title"><b><i class="fa fa-circle-square fa-lg" aria-hidden="true"></i> Add an Activity</b></div>
+              </div></a></li>
+          <li><a href="week1.html" data-context-name="week1" class="item-link item-content">
+              <div class="item-inner">
+                <div class="item-title"><b>Review Planned Activities</b></div>
+              </div></a></li>
+          </ul>
+        </div>
+
+        <div class="list-block" id="addActivityForm" style="display:none">
+          <ul>
+            <!-- Smart select item -->
+            <li>
+              <!-- Additional "smart-select" class -->
+              <a href="#" class="item-link smart-select">
+                <!-- select -->
+                <select name="Activities">
+                  <option value="Tennis" selected>Tennis</option>
+                  <option value="Swimming">Swimming</option>
+                  <option value="Walking">Walking</option>
+                  <option value="Climbing">Climbing</option>
+                  <option value="Running">Running</option>
+
+                </select>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <!-- Select label -->
+                    <div class="item-title">Activities</div>
+                    <!-- Selected value, not required -->
+                    <div class="item-after">Tennis</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <!-- Another smart selects or list view elements -->
+            ...
+          </ul>
+        </div>
+
+
+
+
+
+      <!--<div class="list-block media-list">
+        <ul>{{#each projects}}
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">{{title}}</div>
+              </div>
+              <div class="item-subtitle">{{description}}</div>
+            </div>
+          </li>{{/each}}
+        </ul>
+      </div>-->
+    </div>
+  </div>
+</div>
