@@ -113,6 +113,7 @@ myApp.onPageInit('week1', function (page) {
 })
 
 myApp.onPageInit('add_activity', function (page) {
+  alert("test") ;
 
   $$('#saveActivities').on('click', function (e) {
 
