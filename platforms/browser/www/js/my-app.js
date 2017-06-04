@@ -106,6 +106,7 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true,
 });
 
+
 myApp.onPageInit('week1', function (page) {
   var weekNum = page.name + "activities";
   localStorage.setItem("week", weekNum);
