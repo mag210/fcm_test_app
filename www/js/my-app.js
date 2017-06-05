@@ -105,7 +105,12 @@ var mainView = myApp.addView('.view-main', {
     // Enable dynamic Navbar
     dynamicNavbar: true,
 });
+/*
+var testView = myApp.addView('.view-test', {
 
+
+});
+*/
 
 myApp.onPageInit('week1', function (page) {
   var weekNum = page.name + "activities";
@@ -114,7 +119,6 @@ myApp.onPageInit('week1', function (page) {
 })
 
 myApp.onPageInit('add_activity', function (page) {
-  alert("test") ;
 
   $$('#saveActivities').on('click', function (e) {
 
