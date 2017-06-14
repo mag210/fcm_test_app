@@ -223,8 +223,8 @@ $$('#reminders').on('click', function (e) {
     console.log("hello " + id) ;
     var data= JSON.parse(localStorage.getItem("week1Act")) ;
 
-    //window.open("https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id) ;
-
+    window.open("https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id + "&activity="+data.act1+"&date="+act1Date) ;
+/*
       $.ajax({
         url: "https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id + "&activity="+data.act1+"&date="+act1Date,
         success: function (data) {
@@ -235,7 +235,7 @@ $$('#reminders').on('click', function (e) {
           console.log(errorThrown);
         }
       });
-
+*/
 
   }
   else {
