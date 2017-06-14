@@ -221,8 +221,8 @@ $$('#reminders').on('click', function (e) {
 
     var id  = localStorage.getItem("registrationId") ;
     console.log("hello " + id) ;
-    window.open("https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id) ;
-/*
+    //window.open("https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id) ;
+
       $.ajax({
         url: "https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id,
         method: "get",
@@ -234,7 +234,7 @@ $$('#reminders').on('click', function (e) {
           console.log(errorThrown);
         }
       });
-*/
+
 
   }
   else {
