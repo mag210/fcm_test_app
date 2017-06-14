@@ -145,6 +145,7 @@ myApp.onPageInit('add_activity', function (page) {
         //var theWeek = localStorage.getItem("week") ;
         localStorage.setItem("week1Act", JSON.stringify(actObj));
         var data= JSON.parse(localStorage.getItem("week1Act")) ;
+        mainView.router.loadPage("assign_difficulty.html") ;
 
       }
 
@@ -160,15 +161,67 @@ var data= JSON.parse(localStorage.getItem("week1Act")) ;
 console.log(data.act1) ;
 console.log(data.act2) ;
 console.log(data.act3) ;
-$$('#activity1').html(data.act1);
-$$('#activity2').html(data.act2);
-$$('#activity3').html(data.act3);
+$$('#activity1').html("<h2>" + data.act1 + "</h2>");
+$$('#activity2').html("<h2>" + data.act2 + "</h2>");
+$$('#activity3').html("<h2>" + data.act3 + "</h2>");
+
+  $$('#saveDifficulty').on('click', function (e) {
+
+    console.log("button clicked") ;
+    //var isChecked = $$('.act1').prop('checked').val();
+    var act1Diff = document.querySelector('input[name="act1"]:checked').value;
+    var act2Diff = document.querySelector('input[name="act2"]:checked').value;
+    var act3Diff = document.querySelector('input[name="act3"]:checked').value;
 
 
+
+    actObj= {
+      "act1": data.act1 + " - " + act1Diff,
+      "act2": data.act2 + " - " + act2Diff,
+      "act3": data.act3 + " - " + act3Diff,
+    };
+
+    localStorage.setItem("week1Act", JSON.stringify(actObj));
+    mainView.router.loadPage("set_date.html") ;
+
+
+
+  });
 })
 
 myApp.onPageInit('set_date', function (page) {
+  /*
 var calendarDefault = myApp.calendar({
     input: '#calendar-default',
+});*/
+
+var data= JSON.parse(localStorage.getItem("week1Act")) ;
+$$('#dateAct1').html("<h2>" + data.act1 + "</h2>");
+$$('#dateAct2').html("<h2>" + data.act2 + "</h2>");
+$$('#dateAct3').html("<h2>" + data.act3 + "</h2>");
+
+
+$$('#reminders').on('click', function (e) {
+  console.log("button") ;
+
+  var act1Date = document.querySelector('input[name="act1Date"]').value;
+  var act2Date = document.querySelector('input[name="act2Date"]').value;
+  var act3Date = document.querySelector('input[name="act3Date"]').value;
+  console.log(act1Date) ;
+  console.log(act2Date) ;
+  console.log(act3Date) ;
+
+  if (act1Date != null)
+  {
+    alert("Your activites have been saved and reminders have been set") ;
+  }
+  else {
+    alert("You need to set a date") ;
+  }
+
+
+
+
 });
+
 })

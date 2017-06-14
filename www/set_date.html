@@ -10,26 +10,43 @@
   <div data-page="set_date" class="page">
     <div class="page-content">
       <div class="content-block">
-        <div class="content-block-inner"><p>Add up to three activities that you will schedule for this week.</p></div>
+        <div class="content-block-inner"><p>Add a date and time for the activities you have chosen this week.</p></div>
       </div>
 
 <div class="content-block-title">Default setup</div>
 <div class="list-block">
   <ul>
     <li>
-      <div class="item-content">
+        <div id="dateAct1">Placeholder</div>
         <div class="item-inner">
-          <div class="item-input">
-            <input type="text" placeholder="Your birth date" readonly id="calendar-default">
-          </div>
+          <input class="actDate" style="margin-left:10px ; width:90% ; border-style: solid ;border-color: grey ; border-width: 2px;" type="datetime-local" name="act1Date" placeholder="tap to set Date">
         </div>
-      </div>
+    </li>
+    <li>
+          <div id="dateAct2"></div>
+        <div class="item-inner">
+          <input class="actDate" style="margin-left:10px ; width:90% ;border-style: solid ;border-color: grey ; border-width: 2px;" type="datetime-local" name="act2Date" placeholder="tap to Set Date">
+        </div>
+
+    </li>
+    <li>
+          <div id="dateAct3">Placeholder</div>
+        <div class="item-inner">
+          <input class="actDate" style="margin-left:10px ; width:90% ;border-style: solid ;border-color: grey ; border-width: 2px;" type="datetime-local" name="act3Date" placeholder="tap to set Date">
+        </div>
+
     </li>
   </ul>
 </div>
 
-
-
+    <a id="reminders" href="" data-context-name="" style="width:250px;" class="button active">Set reminders</a>
     </div>
+
   </div>
+
 </div>
+<!--
+<div class="item-input">
+  <input type="text" placeholder="Your birth date" readonly id="calendar-default">
+
+</div>-->
