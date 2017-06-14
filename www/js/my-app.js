@@ -221,11 +221,12 @@ $$('#reminders').on('click', function (e) {
 
     var id  = localStorage.getItem("registrationId") ;
     console.log("hello " + id) ;
+    var data= JSON.parse(localStorage.getItem("week1Act")) ;
+
     //window.open("https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id) ;
 
       $.ajax({
-        url: "https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id,
-        method: "get",
+        url: "https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id + "&activity="+data.act1+"&date="+act1Date,
         success: function (data) {
           alert("alerts sent") ;
           console.log(data) ;
