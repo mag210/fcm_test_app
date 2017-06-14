@@ -3,6 +3,8 @@ Template7.registerHelper('json_stringify', function (context) {
     return JSON.stringify(context);
 });
 
+
+
 // Initialize your app
 var myApp = new Framework7({
     animateNavBackIcon: true,
@@ -142,6 +144,8 @@ myApp.onPageInit('add_activity', function (page) {
         };
 
 
+
+
         //var theWeek = localStorage.getItem("week") ;
         localStorage.setItem("week1Act", JSON.stringify(actObj));
         var data= JSON.parse(localStorage.getItem("week1Act")) ;
@@ -214,6 +218,24 @@ $$('#reminders').on('click', function (e) {
   if (act1Date != null)
   {
     alert("Your activites have been saved and reminders have been set") ;
+
+    var id  = localStorage.getItem("registrationId") ;
+    console.log("hello " + id) ;
+    window.open("https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id) ;
+/*
+      $.ajax({
+        url: "https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id,
+        method: "get",
+        success: function (data) {
+          alert("alerts sent") ;
+          console.log(data) ;
+        },
+        error: function (jQxhr, errorCode, errorThrown) {
+          console.log(errorThrown);
+        }
+      });
+*/
+
   }
   else {
     alert("You need to set a date") ;
