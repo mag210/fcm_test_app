@@ -224,7 +224,8 @@ $$('#reminders').on('click', function (e) {
     var data= JSON.parse(localStorage.getItem("week1Act")) ;
     var act = data.act1.split("-")[0] ;
 
-    window.open("https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id + "&activity="+act+"&date="+act1Date) ;
+    //window.open("https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id + "&activity="+act+"&date="+act1Date) ;
+    window.open("https://www.impulsepal.co.uk/webapp/api/test_send_alerts.php?id="+id + "&activity="+act+"&date="+act1Date);
 /*
       $.ajax({
         url: "https://as.exeter.ac.uk/codebox/iexeter/testing/alerts/test_send_alerts.php?id="+id + "&activity="+data.act1+"&date="+act1Date,
